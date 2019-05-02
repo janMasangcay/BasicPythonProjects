@@ -80,3 +80,28 @@ elif name == "Jan":
 	print("He's name is {}".format(name))
 else:
 	print("That's not neither of em.")
+##Sample function with simple logic
+mySentence = "loves this fast "
+carList = ['TypeR','GTR','mazdaspeed3','M4', 'R34']
+
+def carFunction(name):
+	lst = []
+	for i in carList:
+		msg = "{} {} {}".format(name, mySentence, i)
+		lst.append(msg)
+	return lst
+
+def getName():
+	go = True
+	while go:
+		name = input('What is your name? ')
+		if len(name) > 0:
+			go = False
+		elif name == "Bob":
+			print('Bob can\'t drive stick shift.')
+		else:
+			print('Please provide a name ')
+	lst = carFunction(name)
+	for i in lst:
+		print(i)
+getName()
