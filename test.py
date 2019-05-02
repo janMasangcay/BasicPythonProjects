@@ -68,3 +68,15 @@ i = 0
 while i < 10:
 	print('{} iteration through the loop.'.format(i))
 	i += 1
+##If/Else Statement
+name = "Dagul"
+num = 9
+if name == "Dagul":
+	if num == 9:
+		print("He's name is {} and he's number {}".format(name, num))
+	else:
+		print("He's name is {} and he's number in 1".format(name))
+elif name == "Jan":
+	print("He's name is {}".format(name))
+else:
+	print("That's not neither of em.")
