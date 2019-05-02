@@ -37,3 +37,25 @@ print(newString)
 ##Converting String to List type(by words):
 newString = myString.split(" ")
 print(newString)
+##Check built-in helper methods:
+help(str)
+help(dict)
+help(list)
+help(int)
+help(set)
+help(float)
+help(tuple)
+help(bool)
+##Dictionary in Python is like an object in JavaScript
+##
+person = {
+	'person1': {
+		'fname': "Jan",
+		'lname': "POgi"
+	},
+	'person2': {
+		'fname': "Neil",
+		'lname': "Oneil"
+	}
+}
+print(person['person2']['lname'])
