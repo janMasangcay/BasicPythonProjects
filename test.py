@@ -81,6 +81,7 @@ elif name == "Jan":
 else:
 	print("That's not neither of em.")
 ##Sample function with simple logic
+##def - definition
 mySentence = "loves this fast "
 carList = ['TypeR','GTR','mazdaspeed3','M4', 'R34']
 
@@ -105,3 +106,72 @@ def getName():
 	for i in lst:
 		print(i)
 getName()
+
+##Logic Operators:
+##AND
+##Both conditions are True
+num1 = 1
+num2 = 5
+num1 < num2 and num1 != num2
+##OR
+##The 'or' operator is used when either operand being compared may evaluate to True. 
+##They both do not need to be true just as long as one of them equates to True.
+num1 = 1
+num2 = 5
+num1 < num2 or num1 == num2
+##NOT
+##This returns as True. The results would have been False if not for the presence of the NOT operator. Confusing huh?!
+num1 = 1
+num2 = 5
+not num1 == num2
+##== Double Equal Signs
+##Here the integer value for 6 is being compared to the string literal value of '6'. 
+##A string is not the same as a number so this would evaluate to False.
+6 == '6'
+##!= NOT EQUAL TO
+##In this example, 6 is not equal to 7 so this statement would evaluate to True
+a = 6
+b = 7
+a != b
+##> Greater Than
+##Here, 6 is larger than 3 so this evaluates with True
+a = 3
+b = 6
+b > a
+##>= Greater Than, Equal To
+##For this example, neither is greater but both are still equal, so this would still evaluate to True
+a = 2
+b = 2
+a >= b
+##< Less Than
+##In this statement, 1 is less than 3 so it would be evaluated as True
+a = 1
+b = 3
+a < b
+##<= Less Than, Equal To
+##For this statement, neither 'a' nor 'b' have equal value but 12 is less than 40 so this still evaluates to True
+a = 12
+b = 40
+a <= b
+
+##Advance Arithmetic Operations:
+
+## % Modulus
+a = 2
+b = 11
+b  %  a
+##11 / 2 = 5 with a remainder of 1
+##2 can go into 11, exactly 5 times which is 10
+##Now we can take the 11 - 10 to get the remainder of 1
+##So this statement would evaluate to a modulus of 1
+
+## ** Exponent
+a = 2
+b = 4
+a ** b
+##2 * 2 * 2 * 2
+##2 * 2 = 4
+##4 * 2 = 8
+##8 * 2 = 16
+##This would evaluate to 16
+
