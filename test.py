@@ -95,12 +95,12 @@ def getName():
 	go = True
 	while go:
 		name = input('What is your name? ')
-		if len(name) > 0:
-			go = False
+		if len(name) <= 0:
+			print('Please provide a name ')
 		elif name == "Bob":
 			print('Bob can\'t drive stick shift.')
 		else:
-			print('Please provide a name ')
+			go = False
 	lst = carFunction(name)
 	for i in lst:
 		print(i)
