@@ -20,10 +20,6 @@ print("Hello {}, ukininam!".format(String)) ##String format
 print(int(String1) + num1)##implicitly change String1 to int data type
 ##Python treats collection objects such as List, Tuple, Set, and the Dictionary as an ARRAY.
 ##String dataType is considered as an array or tuple data types
-##ForLoop in Python:
-for i in List:
-	print(i)
-##
 List.append("densha")##add an element inside a list
 ##Tuple is immutable, once set can no longer change
 ##Converting Tuple to List type:
@@ -47,7 +43,7 @@ help(float)
 help(tuple)
 help(bool)
 ##Dictionary in Python is like an object in JavaScript
-##
+##nested dictionary:
 person = {
 	'person1': {
 		'fname': "Jan",
@@ -59,3 +55,16 @@ person = {
 	}
 }
 print(person['person2']['lname'])
+##ForLoop in Python:
+for i in List:
+	print(i)
+##
+i = 0
+for i in range(10):
+	print('{} iteration through the loop.'.format(i))
+	i += 1
+##WhileLoop in Python:
+i = 0
+while i < 10:
+	print('{} iteration through the loop.'.format(i))
+	i += 1
