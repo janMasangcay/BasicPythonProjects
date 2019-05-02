@@ -30,8 +30,10 @@ List.append("densha")##add an element inside a list
 animal = ( 'zebra', 'alligator', 'giraffe', 'goat', 'ox' )
 lstAnimal = list(animal)
 print(lstAnimal)
-##Converting String to List type:
+##Converting String to List type(by elements):
 myString = "Hello I am pleased to meet you"
 newString = list(myString)
 print(newString)
-##Converting String to List type:
+##Converting String to List type(by words):
+newString = myString.split(" ")
+print(newString)
