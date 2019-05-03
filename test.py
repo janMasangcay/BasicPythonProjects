@@ -193,7 +193,7 @@ def printMe():
 print(printMe.__doc__)
 ##help(printMe) - prints doctring inside this function.
 
-##Create module
+"""Create module"""
 ##This is the testCourse file:
 def getMaxNum(num1, num2):
     return num1 + num2
@@ -217,7 +217,7 @@ if __name__ == "__main__":
 # 	print(total)
 # 	print(total1)
 
-##Dunder Method:
+"""Dunder Method:"""
 ##File name - app.py
 def getAppName():
     return (__name__)
@@ -233,3 +233,23 @@ if __name__ == "__main__":
 # if __name__ == "__main__":
 # 	print("I am running code from: {}.".format(app.getAppName()))
 # 	print("I am running code from: {}.".format(getAppName2()))
+
+"""Error Handling"""
+def getUserNum():
+    num1 = input('Please provide the first numeric value: ')
+    num2 = input('Please provide the second numeric value: ')
+    getTotal(num1, num2)
+
+def getTotal(userNum1, userNum2):
+    try:
+        total = int(userNum1) + int(userNum2)
+        print('{} + {} = {}'.format(userNum1, userNum2, total))
+    except ValueError as error:
+        print('You fucked up with the number! Here\'s why: \n{}'.format(error))
+    except:
+        print('Something went wrong!')
+    finally:
+        print('Get better!!!')
+
+if __name__ == "__main__":
+    getUserNum()
