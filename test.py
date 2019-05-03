@@ -175,3 +175,9 @@ a ** b
 ##8 * 2 = 16
 ##This would evaluate to 16
 
+##Function vs Method:
+##FUNCTION and METHODs are virtually the same objects. They both represent a block of code that 
+##performs a useful task and each may be called on repeatedly, anytime within a program.
+##The primary difference between the two is that a method has been defined within a class object. 
+##In this case, the method belongs to that class object. This means that the method has a specific scope.
+
