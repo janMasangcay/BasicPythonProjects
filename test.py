@@ -193,3 +193,27 @@ def printMe():
 print(printMe.__doc__)
 ##help(printMe) - prints doctring inside this function.
 
+##Create module
+##This is the testCourse file:
+def getMaxNum(num1, num2):
+    return num1 + num2
+
+def calcBills():
+    myBills = {'Electric': 120.00, 'Rent': 1200.00, 'Water_Sewer': 60.00, 'Car_Insurance': 75.00, 'Phone': 65.00}
+    total = 0
+    for i in myBills:
+        total += myBills[i]
+    owed = 'The total owed for bills this month is: ${}'.format(total)
+    return owed
+	
+if __name__ == "__main__":
+    pass
+##This will be on separate file:
+##import testCourse
+##
+# if __name__ == "__main__":
+# 	total = testCourse.getMaxNum(2,5)
+# 	total1 = testCourse.calcBills()
+# 	print(total)
+# 	print(total1)
+
