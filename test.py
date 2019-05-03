@@ -95,7 +95,7 @@ def carFunction(name):
 def getName():
 	go = True
 	while go:
-		name = input('What is your name? ')
+		name = input('What is your name?\n')
 		if len(name) <= 0:
 			print('Please provide a name ')
 		elif name == "Bob":
@@ -175,9 +175,21 @@ a ** b
 ##8 * 2 = 16
 ##This would evaluate to 16
 
-##Function vs Method:
-##FUNCTION and METHODs are virtually the same objects. They both represent a block of code that 
-##performs a useful task and each may be called on repeatedly, anytime within a program.
-##The primary difference between the two is that a method has been defined within a class object. 
-##In this case, the method belongs to that class object. This means that the method has a specific scope.
+"""Function vs Method:
+FUNCTION and METHODs are virtually the same objects. They both represent a block of code that 
+performs a useful task and each may be called on repeatedly, anytime within a program.
+The primary difference between the two is that a method has been defined within a class object. 
+In this case, the method belongs to that class object. This means that the method has a specific scope."""
+
+##Input Method:
+name = input('What is your \'NAME\'?\n>>>').upper() ##print('Welcome to Python {}.'.format(name))
+
+##Docstrings(Documentation String) - this is you telling others what this thing does/do.
+def printMe():
+	"""This is a DOCSTRINGS
+	"""
+	print("This is just a regular print")
+
+print(printMe.__doc__)
+##help(printMe) - prints doctring inside this function.
 
