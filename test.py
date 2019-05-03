@@ -217,3 +217,19 @@ if __name__ == "__main__":
 # 	print(total)
 # 	print(total1)
 
+##Dunder Method:
+##File name - app.py
+def getAppName():
+    return (__name__)
+    
+if __name__ == "__main__":
+	pass
+##testApp.py
+# import app
+
+# def getAppName2():
+# 	return (__name__)
+
+# if __name__ == "__main__":
+# 	print("I am running code from: {}.".format(app.getAppName()))
+# 	print("I am running code from: {}.".format(getAppName2()))
