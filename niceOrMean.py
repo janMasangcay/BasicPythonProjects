@@ -75,8 +75,24 @@ def win(nice, mean, userName):
     # call again() and pass in our variables
     again(nice, mean, userName)
 
-
-
+def again(nice, mean, userName):
+    go = True
+    while go:
+        playAgain = input('\nDo you wanna play again? (y/n):\n>>>').lower()
+        if playAgain == 'y':
+            go = False
+            reset(nice, mean, userName)
+        elif playAgain == 'n':
+            print('\nOh, so sad, sorry to see you go!')
+            go = False
+            quit()
+        else:
+            print('\nEnter ( Y ) for "YES", ( N ) for "NO": \n>>>')
+        
+def reset(nice, mean, userName):
+    nice = 0
+    mean = 0
+    start(nice, mean, userName)
 
 
 
