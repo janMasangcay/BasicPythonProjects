@@ -32,7 +32,7 @@ def getName(userName):
         print('\nThank you for playing again, {}!'.format(userName))
     else:
         go = True
-        while (go):
+        while go:
             userName = input('\nWhat is your name?\n>>>').capitalize()
             if userName != "":
                 print('\nWelcome, {}.'.format(userName))
@@ -68,6 +68,15 @@ def score(nice, mean, userName):
         lose(nice, mean, userName)
     else:        # else, call niceMean() passing in the variables so it can use them
         niceMean(nice, mean, userName)
+
+def win(nice, mean, userName):
+    # Substitute the {} wildcards with our variable values
+    print('\nNice job {}, you win! \nEveryone loves you and you\'ve \nmade lots of friends along the way!'.format(userName))
+    # call again() and pass in our variables
+    again(nice, mean, userName)
+
+
+
 
 
 
