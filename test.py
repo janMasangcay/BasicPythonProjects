@@ -253,3 +253,25 @@ def getTotal(userNum1, userNum2):
 
 if __name__ == "__main__":
     getUserNum()
+
+"""Error Handling with Auto Correction"""
+def userNum():
+    num1 = input('Please provide the first numeric value: ')
+    num2 = input('\nPlease provide the second numeric value: ')
+    return num1, num2
+
+def userTotal():
+    go = True
+    while go:
+        userNum1, userNum2 = userNum()
+        try:
+            total = int(userNum1) + int(userNum2)
+            go = False
+        except ValueError as error:
+            print('\nYou fucked up with the number! Here\'s why: \n{}'.format(error) + "\n")
+        except:
+            print('\nSomething went wrong!')
+    print('{} + {} = {}'.format(userNum1, userNum2, total))
+
+if __name__ == "__main__":
+    userTotal()
