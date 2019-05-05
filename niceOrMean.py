@@ -41,9 +41,10 @@ def getName(userName):
                 go = False
     return userName   
 
-def niceMean(mean, nice, userName):
+def niceMean(nice, mean, userName):
     go = True
     while go:
+        showScore(nice, mean, userName)
         pick = input('\nA stranger approaches you for a \nconversation. Will you be nice \nor mean? (N/M) \n>>>>>>').lower()
         if pick == 'n':
             print('\nThe stranger walks away smiling...')
@@ -53,7 +54,20 @@ def niceMean(mean, nice, userName):
             print('\nThe stranger glares at you \nmenacingly and storms off...')
             mean = mean + 1
             go = False
-    return nice, mean, userName # pass the 3 variables to the score
+    score(nice, mean, userName) # pass the 3 variables to the score()
+    return nice, mean, userName
+
+def showScore(nice, mean, userName):
+    print('/n{}, your current total: \n(Nice = {}) and (Mean = {})'.format(userName, nice, mean))
+
+def score(nice, mean, userName):
+    # score function is being passed the value stored within the 3 variables
+    if nice > 2: # if condition is valid, call win() passing in the variables so it can use them
+        win(nice, mean, userName)
+    elif mean > 2: # if condition is valid, call lose() passing in the variables so it can use them
+        lose(nice, mean, userName)
+    else:        # else, call niceMean() passing in the variables so it can use them
+        niceMean(nice, mean, userName)
 
 
 
