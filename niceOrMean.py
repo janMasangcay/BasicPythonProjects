@@ -41,6 +41,19 @@ def getName(userName):
                 go = False
     return userName   
 
+def niceMean(mean, nice, userName):
+    go = True
+    while go:
+        pick = input('\nA stranger approaches you for a \nconversation. Will you be nice \nor mean? (N/M) \n>>>>>>').lower()
+        if pick == 'n':
+            print('\nThe stranger walks away smiling...')
+            nice = nice + 1
+            go = False
+        if pick == 'm':
+            print('\nThe stranger glares at you \nmenacingly and storms off...')
+            mean = mean + 1
+            go = False
+    return nice, mean, userName # pass the 3 variables to the score
 
 
 
