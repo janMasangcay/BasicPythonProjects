@@ -15,9 +15,6 @@ def start(nice=0, mean=0, name=""):
     # get user's name
     name = getName(name)
     nice, mean, name = niceMean(nice, mean, name)
-    print(nice)
-    print(mean)
-    print(name)
 
 def getName(userName):
     """
@@ -45,7 +42,7 @@ def niceMean(nice, mean, userName):
     go = True
     while go:
         showScore(nice, mean, userName)
-        pick = input('\nA stranger approaches you for a \nconversation. Will you be nice \nor mean? (N/M) \n>>>>>>').lower()
+        pick = input('\nA stranger approaches you for a \nconversation. Will you be nice \nor mean? (N/M) \n>>>').lower()
         if pick == 'n':
             print('\nThe stranger walks away smiling...')
             nice = nice + 1
@@ -58,7 +55,7 @@ def niceMean(nice, mean, userName):
     return nice, mean, userName
 
 def showScore(nice, mean, userName):
-    print('/n{}, your current total: \n(Nice = {}) and (Mean = {})'.format(userName, nice, mean))
+    print('\n{}, your current total: \n(Nice: {}) and (Mean: {})'.format(userName, nice, mean))
 
 def score(nice, mean, userName):
     # score function is being passed the value stored within the 3 variables
@@ -72,6 +69,12 @@ def score(nice, mean, userName):
 def win(nice, mean, userName):
     # Substitute the {} wildcards with our variable values
     print('\nNice job {}, you win! \nEveryone loves you and you\'ve \nmade lots of friends along the way!'.format(userName))
+    # call again() and pass in our variables
+    again(nice, mean, userName)
+
+def lose(nice, mean, userName):
+    # Substitute the {} wildcards with our variable values
+    print('\nAhhh too bad, game over! \n{}, you live in a dirty beat-up \nvan by the river, wretched and alone!'.format(userName))
     # call again() and pass in our variables
     again(nice, mean, userName)
 
@@ -92,6 +95,7 @@ def again(nice, mean, userName):
 def reset(nice, mean, userName):
     nice = 0
     mean = 0
+    # userName is being passed back, this changes the flow of getName()
     start(nice, mean, userName)
 
 
