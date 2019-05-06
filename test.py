@@ -306,3 +306,67 @@ def userTotal():
 if __name__ == "__main__":
     userTotal()
 
+"""Class and Inheritance"""
+# Parent class
+class Organism:
+	name = "Unknown"
+	species = "Unknown"
+	legs = None
+	arms = None
+	dna = "Sequence A"
+	origin = "Unknown"
+	carbonBased = True
+	
+	def information(self):
+		msg = '\nName: {}\nSpecies: {}\nLegs: {}\nArms: {}\nDNA: {}\nOrigin: {}\nCarbon-Based: {}'.format(self.name, self.species, self.legs, self.arms, self.dna, self.origin, self.carbonBased)
+		print(msg)
+
+# child class instance
+class Human(Organism):
+	name = "Jakulero"
+	species = "Homosapien"
+	legs = 2
+	arms = 2
+	origin = "Earth"
+
+	def ingenuity(self):
+		msg = '\nCreates a deadly weapon using only their farts.'
+		print(msg)
+
+# another child instance
+class Dog(Organism):
+	name = "Spot"
+	species = "Canine"
+	legs = 4
+	arms = 0
+	dna = "Sequence B"
+	origin = "Earth"
+
+	def bite(self):
+		msg = "\nWill bite you to death!"
+		print(msg)
+
+# another child class instance
+class Bacteria(Organism):
+	name = "X"
+	species = "Bacteria"
+	legs = 0
+	arms = 0
+	dna = "Sequence C"
+	origin = "Mars"
+
+	def replication(self):
+		msg = "Kagebunshin technique x1000"
+		print(msg)
+
+if __name__ == '__main__':
+	human = Human()
+	human.information()
+
+	dog = Dog()
+	dog.bite()
+	dog.information
+
+	bacteria = Bacteria()
+	bacteria.replication()
+	bacteria.information()
