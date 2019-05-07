@@ -393,7 +393,7 @@ class ParentWindow(Frame): # FRAME is a TKINTER module
     def __init__(self, master):
         Frame.__init__(self)
         self.master = master  # Assigning master from line 13 to self.master
-        self.master.resizable(width=False, height=False)
+        self.master.resizable(width=True, height=True)
         # set the height and width of the window
         self.master.geometry('{}x{}'.format(700, 400))
         self.master.title('Learning TKinter')
@@ -415,21 +415,35 @@ class ParentWindow(Frame): # FRAME is a TKINTER module
         self.labelLName = Label(self.master, text="Jakul: ", font=("Helvetica", 14), fg="white", bg="#000")
         self.labelLName.grid(row=1, column=0, padx=(200, 0), pady=(30,0))
 
+        #################################################################
+        self.labelDisplay = Label(self.master, text='"This is a test!!!"', font=("Helvetica", 14), fg="white", bg="#000")
+        self.labelDisplay.grid(row=3, column=1, padx=(0,0), pady=(0,0))
+
         # Entry is a TKinter module # self.master is the WINDOW BODY
-        self.txtBoxFName = Entry(self.master, text=self.varFName, font=("Helvetica", 14), fg="white", bg="white")
+        self.txtBoxFName = Entry(self.master, text=self.varFName, font=("Helvetica", 14), fg="#000", bg="white")
         self.txtBoxFName.grid(row=0, column=1, padx=(0, 0), pady=(110,0))
 
         # Entry is a TKinter module # self.master is the WINDOW BODY
-        self.txtBoxLName = Entry(self.master, text=self.varLName, font=("Helvetica", 14), fg="white", bg="white")
+        self.txtBoxLName = Entry(self.master, text=self.varLName, font=("Helvetica", 14), fg="#000", bg="white")
         self.txtBoxLName.grid(row=1, column=1, padx=(0, 0), pady=(30,0))
 
         # Using TKinter BUTTON module
-        self.btnSubmit = Button(self.master, text="Submit", width=10, height=1, bg="white", relief="flat")
+        self.btnSubmit = Button(self.master, text="Submit", width=10, height=1, bg="white", relief="flat", command=self.submit)
         self.btnSubmit.grid(row=2, column=1, padx=(100,0), pady=(30,0), sticky="NW")
 
         # Using TKinter BUTTON module
-        self.btnCancel = Button(self.master, text="Cancel", width=10, height=1, bg="white", relief="flat") 
+        self.btnCancel = Button(self.master, text="Cancel", width=10, height=1, bg="white", relief="flat", command=self.cancel) 
         self.btnCancel.grid(row=2, column=1, padx=(0,50), pady=(30,0), sticky="NW")
+
+    def submit(self):
+        fn = self.varFName.get()
+        ln = self.varLName.get()
+        self.labelDisplay.config(text='{} {}'.format(fn, ln))
+        
+    def cancel(self):
+        self.master.destroy()
+
+
 
 
 if __name__ == '__main__':
