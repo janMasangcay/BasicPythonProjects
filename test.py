@@ -371,12 +371,15 @@ if __name__ == '__main__':
 	bacteria.replication()
 	bacteria.information()
 
-"""TKinter"""
+"""TKinter and Modules"""
 import tkinter
 from tkinter import Frame
 from tkinter import StringVar
 from tkinter import Entry
 from tkinter import Tk
+from tkinter import Grid
+from tkinter import Label
+from tkinter import Button
 
 ##Creating a new TKinter Instance in a different way##
 # passingTKinter = Tk()
@@ -385,30 +388,49 @@ from tkinter import Tk
 # passingTKinter.config(bg="#000")
 
 
-##Creating another TKinter Instance
-class ParentWindow(Frame):
-    def __init__ (self, master):
+# Creating another TKinter Instance
+class ParentWindow(Frame): # FRAME is a TKINTER module
+    def __init__(self, master):
         Frame.__init__(self)
-
-        self.master = master # Assigning master from line 13 to self.master
+        self.master = master  # Assigning master from line 13 to self.master
         self.master.resizable(width=False, height=False)
-        self.master.geometry('{}x{}'.format(700, 400)) # set the height and width of the window
+        # set the height and width of the window
+        self.master.geometry('{}x{}'.format(700, 400))
         self.master.title('Learning TKinter')
-        self.master.config(bg='#000') # set the background-color
+        self.master.config(bg='#000')  # set the background-color
 
-        self.varFName = StringVar() # StringVar() is a Python variable class
+        self.varFName = StringVar()  # StringVar() is a Python variable class
         self.varLName = StringVar()
-        self.varFName.set("Jakul") # Assigning value to varFName
-        self.varLName.set("Ero")
+        # self.varFName.set("Jakul") # Assigning value to varFName
+        # self.varLName.set("Ero")
 
-        print(self.varFName.get()) # Getting the value of varFName for display
-        print(self.varLName.get())
+        # print(self.varFName.get()) # Getting the value of varFName for display
+        # print(self.varLName.get())
 
-        self.txtBoxFName = Entry(self.master, text=self.varFName, font=("Helvetica", 14), fg="#000", bg="lightblue") # Entry is a TKinter module # self.master is the WINDOW BODY
-        self.txtBoxFName.pack()
+        # Using TKinter LABEL module
+        self.labelFName = Label(self.master, text="Jakul: ", font=("Helvetica", 14), fg="white", bg="#000")
+        self.labelFName.grid(row=0, column=0, padx=(200, 0), pady=(110,0))
 
-        self.txtBoxLName = Entry(self.master, text=self.varLName, font=("Helvetica", 14), fg="#000", bg="lightblue") # Entry is a TKinter module # self.master is the WINDOW BODY
-        self.txtBoxLName.pack()
+        # Using TKinter LABEL module
+        self.labelLName = Label(self.master, text="Jakul: ", font=("Helvetica", 14), fg="white", bg="#000")
+        self.labelLName.grid(row=1, column=0, padx=(200, 0), pady=(30,0))
+
+        # Entry is a TKinter module # self.master is the WINDOW BODY
+        self.txtBoxFName = Entry(self.master, text=self.varFName, font=("Helvetica", 14), fg="white", bg="white")
+        self.txtBoxFName.grid(row=0, column=1, padx=(0, 0), pady=(110,0))
+
+        # Entry is a TKinter module # self.master is the WINDOW BODY
+        self.txtBoxLName = Entry(self.master, text=self.varLName, font=("Helvetica", 14), fg="white", bg="white")
+        self.txtBoxLName.grid(row=1, column=1, padx=(0, 0), pady=(30,0))
+
+        # Using TKinter BUTTON module
+        self.btnSubmit = Button(self.master, text="Submit", width=10, height=1, bg="white", relief="flat")
+        self.btnSubmit.grid(row=2, column=1, padx=(100,0), pady=(30,0), sticky="NW")
+
+        # Using TKinter BUTTON module
+        self.btnCancel = Button(self.master, text="Cancel", width=10, height=1, bg="white", relief="flat") 
+        self.btnCancel.grid(row=2, column=1, padx=(0,50), pady=(30,0), sticky="NW")
+
 
 if __name__ == '__main__':
     root = Tk()
