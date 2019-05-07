@@ -373,13 +373,16 @@ if __name__ == '__main__':
 
 """TKinter"""
 import tkinter
-from tkinter import *
+from tkinter import Frame
+from tkinter import StringVar
+from tkinter import Entry
+from tkinter import Tk
 
-##Creating a new TKinter Instance in a different way
-passingTKinter = Tk()
-passingTKinter.resizable(width=True, height=True)
-passingTKinter.geometry('{}x{}'.format(700, 400))
-passingTKinter.config(bg="#000")
+##Creating a new TKinter Instance in a different way##
+# passingTKinter = Tk()
+# passingTKinter.resizable(width=True, height=True)
+# passingTKinter.geometry('{}x{}'.format(700, 400))
+# passingTKinter.config(bg="#000")
 
 
 ##Creating another TKinter Instance
@@ -392,6 +395,20 @@ class ParentWindow(Frame):
         self.master.geometry('{}x{}'.format(700, 400)) # set the height and width of the window
         self.master.title('Learning TKinter')
         self.master.config(bg='#000') # set the background-color
+
+        self.varFName = StringVar() # StringVar() is a Python variable class
+        self.varLName = StringVar()
+        self.varFName.set("Jakul") # Assigning value to varFName
+        self.varLName.set("Ero")
+
+        print(self.varFName.get()) # Getting the value of varFName for display
+        print(self.varLName.get())
+
+        self.txtBoxFName = Entry(self.master, text=self.varFName, font=("Helvetica", 14), fg="#000", bg="lightblue") # Entry is a TKinter module # self.master is the WINDOW BODY
+        self.txtBoxFName.pack()
+
+        self.txtBoxLName = Entry(self.master, text=self.varLName, font=("Helvetica", 14), fg="#000", bg="lightblue") # Entry is a TKinter module # self.master is the WINDOW BODY
+        self.txtBoxLName.pack()
 
 if __name__ == '__main__':
     root = Tk()
