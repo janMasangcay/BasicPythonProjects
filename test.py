@@ -370,3 +370,30 @@ if __name__ == '__main__':
 	bacteria = Bacteria()
 	bacteria.replication()
 	bacteria.information()
+
+"""TKinter"""
+import tkinter
+from tkinter import *
+
+##Creating a new TKinter Instance in a different way
+passingTKinter = Tk()
+passingTKinter.resizable(width=True, height=True)
+passingTKinter.geometry('{}x{}'.format(700, 400))
+passingTKinter.config(bg="#000")
+
+
+##Creating another TKinter Instance
+class ParentWindow(Frame):
+    def __init__ (self, master):
+        Frame.__init__(self)
+
+        self.master = master # Assigning master from line 13 to self.master
+        self.master.resizable(width=False, height=False)
+        self.master.geometry('{}x{}'.format(700, 400)) # set the height and width of the window
+        self.master.title('Learning TKinter')
+        self.master.config(bg='#000') # set the background-color
+
+if __name__ == '__main__':
+    root = Tk()
+    App = ParentWindow(root)
+    root.mainloop()
