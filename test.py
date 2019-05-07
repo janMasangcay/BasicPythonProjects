@@ -415,7 +415,6 @@ class ParentWindow(Frame): # FRAME is a TKINTER module
         self.labelLName = Label(self.master, text="Jakul: ", font=("Helvetica", 14), fg="white", bg="#000")
         self.labelLName.grid(row=1, column=0, padx=(200, 0), pady=(30,0))
 
-        #################################################################
         self.labelDisplay = Label(self.master, text='"This is a test!!!"', font=("Helvetica", 14), fg="white", bg="#000")
         self.labelDisplay.grid(row=3, column=1, padx=(0,0), pady=(0,0))
 
@@ -450,3 +449,8 @@ if __name__ == '__main__':
     root = Tk()
     App = ParentWindow(root)
     root.mainloop()
+
+"""Create Virtual Environment"""
+# Use cmd:
+# navigate to directory
+# command: virtualenv <nameOfTheEnv>
