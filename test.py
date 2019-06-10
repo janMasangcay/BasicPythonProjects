@@ -12,6 +12,16 @@ Dictionary = {
 	'index1': 'value1',
 	'index2': 'value2'
 }
+
+Python order of operation:
+BIDMAS
+-Bracket
+-Indices
+-Division
+-multiplication
+-Addition
+-subtraction
+
 Boolean = True
 
 ##alt + p = repeat the last command in python
