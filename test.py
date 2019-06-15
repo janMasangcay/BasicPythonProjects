@@ -454,3 +454,32 @@ if __name__ == '__main__':
 # Use cmd:
 # navigate to directory
 # command: virtualenv <nameOfTheEnv>
+"""Another way to create Vitual Environment"""
+# Use cmd:
+# navigate to directory
+# command: py -m venv <nameOfTheEnv>
+
+"""Create DJANGO Project + Virtual Environment"""
+##LAYOUT: Separating ENV to the Actual Project
+# Use cmd:
+# navigate to directory
+# command: virtualenv <nameOfTheEnv>
+# activate env
+# command: pip install django(optional: include version)
+# next to the <nameOfTheEnv>, create the folder that holds the entire project: mkdir <projectName>
+# navigate inside proj folder enter command:
+# django-admin startproject mainapp
+# Check if installation is succesful:
+	# navigate to MAINAPP
+	# command: manage.py runserver
+
+"""Set-Up Default Database and Create SuperUser"""
+# This will let the user log-in as an ADMIN: http://localhost:8000/admin/
+# inside MAINAPP, command: manage.py migrate
+# Create SUPERUSER, command: manage.py createsuperuser
+
+"""Creating Your Very First App"""
+# Command: manage.py startapp <appName>
+
+"""DJango Documentation"""
+# https://docs.djangoproject.com/
