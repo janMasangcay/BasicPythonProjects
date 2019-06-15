@@ -464,7 +464,6 @@ if __name__ == '__main__':
 # Use cmd:
 # navigate to directory
 # command: virtualenv <nameOfTheEnv>
-<<<<<<< HEAD
 """Another way to create Vitual Environment"""
 # Use cmd:
 # navigate to directory
@@ -494,5 +493,3 @@ if __name__ == '__main__':
 
 """DJango Documentation"""
 # https://docs.djangoproject.com/
-=======
->>>>>>> de5d57c63feea330b398c8a962ce651b667f6da7
