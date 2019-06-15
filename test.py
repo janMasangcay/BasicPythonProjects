@@ -12,6 +12,16 @@ Dictionary = {
 	'index1': 'value1',
 	'index2': 'value2'
 }
+
+Python order of operation:
+BIDMAS
+-Bracket
+-Indices
+-Division
+-multiplication
+-Addition
+-subtraction
+
 Boolean = True
 
 ##alt + p = repeat the last command in python
@@ -454,6 +464,7 @@ if __name__ == '__main__':
 # Use cmd:
 # navigate to directory
 # command: virtualenv <nameOfTheEnv>
+<<<<<<< HEAD
 """Another way to create Vitual Environment"""
 # Use cmd:
 # navigate to directory
@@ -483,3 +494,5 @@ if __name__ == '__main__':
 
 """DJango Documentation"""
 # https://docs.djangoproject.com/
+=======
+>>>>>>> de5d57c63feea330b398c8a962ce651b667f6da7
